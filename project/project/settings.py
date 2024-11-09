@@ -38,12 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'author',
-    'blog_project',
     'categories',
     'posts',
     'profiles',
     'crispy_forms',
-'crispy_bootstrap5'
+'crispy_bootstrap5',
 ]
 CRISPY_ALLOWED_TEMPLATE_PACK="bootstrap5"
 CRISPY_TEMPLATE_PACK='bootstrap5'

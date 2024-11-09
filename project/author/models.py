@@ -6,3 +6,5 @@ class Author(models.Model):
     bio=models.TextField()
     phoneNumber=models.CharField(max_length=11)
     
+    def __str__(self):
+        return self.name
