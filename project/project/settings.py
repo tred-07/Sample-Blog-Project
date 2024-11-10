@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'categories',
     'posts',
     'profiles',
+    'blog_project',
     'crispy_forms',
 'crispy_bootstrap5',
 ]
