@@ -1,0 +1,1 @@
+# This is a simple blog project where anyone can add author, add profile, add category, add post without any log in or sign up based on Django framework.
