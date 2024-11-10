@@ -7,7 +7,7 @@ def add_authors(request):
        if form1.is_valid:
             form1.save()
             print("Ok")
-            return render(request,'add_author.html',{'form':form1})
+            return redirect('home')
     return render(request,'add_author.html',{'form':form.AuthorForm()})
 
 def confAuthor(request):

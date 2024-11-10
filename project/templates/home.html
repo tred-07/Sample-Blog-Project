@@ -1,4 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1 style="text-align: center;">Home Page</h1>
+<div class="conatiners" style="width: 80%;margin: auto;display: flex;flex-wrap: wrap;gap:10px;">
+    {% for post in posts %}
+    <div class="card" style="margin: 10px;">
+        <div class="card-body">
+          <h5 class="card-title">{{post.title}}</h5>
+          <h3>{{post.content}}</h3>
+          <h3>{{post.category}}</h3>
+          <h2>{{post.author}}</h2>
+        </div>
+      </div>
+      {% endfor %}
+</div>
 {% endblock %}
+
+
+
