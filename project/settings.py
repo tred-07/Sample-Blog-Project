@@ -99,7 +99,7 @@ DATABASES = {
         'USER': 'postgres.xkafjyrrxqtfvmlicmme',
         'PASSWORD':env('DB_PASSWORD'),
         'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',
-        'PORT': '6543'
+        'PORT': '5432'
     }
 }
 
