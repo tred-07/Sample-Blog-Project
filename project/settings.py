@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-zn0fhapx6-sbhptm((t#=6lxzqv66j38uiah_@je35e@z9%65s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://mamar-bank.onrender.com','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://sample-blog-project-vm45.onrender.com','https://*.127.0.0.1']
 STATIC_ROOT=BASE_DIR/'staticfiles'
 
 
