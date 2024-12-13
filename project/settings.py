@@ -15,11 +15,15 @@ import environ
 # load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 env=environ.Env()
+environ.Env.read_env()
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-zn0fhapx6-sbhptm((t#=6lxzqv66j38uiah_@je35e@z9%65s'
+SECRET_KEY=env('SEC')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -97,7 +101,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres.xkafjyrrxqtfvmlicmme',
-        'PASSWORD':env('DB_PASSWORD'),
+        'PASSWORD':env("DB_PASS"),
         'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',
         'PORT': '5432'
     }
