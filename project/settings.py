@@ -9,12 +9,12 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-from .env import DB_PASS
+import os
 from pathlib import Path
-
+from dotenv import load_dotenv, dotenv_values
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -26,11 +26,12 @@ SECRET_KEY = 'django-insecure-zn0fhapx6-sbhptm((t#=6lxzqv66j38uiah_@je35e@z9%65s
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+DB_PASS2=os.getenv("DB_PASS")
 
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,6 +50,7 @@ CRISPY_ALLOWED_TEMPLATE_PACK="bootstrap5"
 CRISPY_TEMPLATE_PACK='bootstrap5'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -95,7 +97,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres.jhclvzinitgtbnpvupux',
-        'PASSWORD': DB_PASS,
+        'PASSWORD':DB_PASS2,
         'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',
         'PORT': '6543'
     }
