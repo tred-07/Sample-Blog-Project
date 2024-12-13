@@ -27,7 +27,7 @@ SECRET_KEY=env('SEC')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app","https://sample-blog-project-vm45.onrender.com"]
+ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app","*"]
 CSRF_TRUSTED_ORIGINS = ['https://sample-blog-project-vm45.onrender.com','https://*.127.0.0.1']
 STATIC_ROOT=BASE_DIR/'staticfiles'
 
