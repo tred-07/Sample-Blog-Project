@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-zn0fhapx6-sbhptm((t#=6lxzqv66j38uiah_@je35e@z9%65s
 DEBUG = True
 
 STATIC_ROOT=BASE_DIR/'staticfiles'
-DB_PASS2=os.getenv("DB_PASS")
+DB_PASS2=env("DB_PASS")
 
 # Application definition
 
@@ -97,7 +97,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres.jhclvzinitgtbnpvupux',
-        'PASSWORD':env(DB_PASS),
+        'PASSWORD':DB_PASS2,
         'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',
         'PORT': '6543'
     }
