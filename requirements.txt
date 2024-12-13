@@ -2,4 +2,6 @@ asgiref
 crispy-bootstrap5
 Django
 django-crispy-forms
+psycopg2-binary
 sqlparse
+whitenoise
